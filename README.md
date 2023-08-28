@@ -16,6 +16,22 @@ a grouping of related classes based on their importance or function.
 
 ascii banner generator: https://manytools.org/hacker-tools/ascii-banner/
 
+
+### Project Template
+ProjectName.Solution/
+  ├── ProjectName/
+  │     ├── Models/
+  |     |     ├── ClassName.cs
+  |     |     ├── ClassName.cs
+  │     │     └── ClassName.cs
+  |     ├── UserInterfaceModels/
+  |     |     └── ClassName.cs
+  │     ├── ProjectName.csproj
+  │     └── Program.cs
+  ├── .gitignore
+  └── README.md
+
+
 function hideElement(elementID){
   document.getElement(elementID).setAttribute(class, hidden);
 }
