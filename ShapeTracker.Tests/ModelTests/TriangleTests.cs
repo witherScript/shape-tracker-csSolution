@@ -23,6 +23,17 @@ namespace ShapeTracker.Tests
 
       Assert.AreEqual(length1, result); //Assert
     }
+
+    [TestMethod]
+    public void SetSide1_SetsValueOfSide1_Void()
+    {
+      Triangle newTriangle = new Triangle(3); //Arrange
+      int newLength1 = 44;
+
+      newTriangle.Side1 = newLength1; //Act
+
+      Assert.AreEqual(newLength1, newTriangle.Side1);
+    }
   }
 
 }
