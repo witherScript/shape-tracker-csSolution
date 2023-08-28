@@ -30,6 +30,10 @@ namespace ShapeTracker.Models
       _side3 = length3;
     }
     
+    public string CheckType()
+    {
+      return "not a triangle";
+    }
   }
   
 }
