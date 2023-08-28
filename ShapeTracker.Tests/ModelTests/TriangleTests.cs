@@ -1,11 +1,17 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ShapeTracker.Models;
+using System.Collections.Generic;
+using System;
 
 namespace ShapeTracker.Tests
 {
   [TestClass]
-  public class TriangleTests
+  public class TriangleTests:IDisposable
   {
+    public void Dispose()
+    {
+      Triangle.ClearAll();
+    }
     [TestMethod]
     public void TriangleConstructor_Creates_InstanceOfTriangle_Triangle()
     {
@@ -93,6 +99,19 @@ namespace ShapeTracker.Tests
       Triangle equilateralTriangle = new Triangle(11,11,11);
       string triType = equilateralTriangle.CheckType();
       Assert.AreEqual("equilateral", triType);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsAllTriangleInstances_List()
+    {
+      Triangle first = new Triangle(2,3,4);
+      Triangle second = new Triangle(3,4,5);
+      Triangle third = new Triangle(5,6,7);
+
+      List<Triangle> expected = new List<Triangle>{first, second, third};
+
+      List<Triangle> actual = Triangle.GetAll();
+
+      CollectionAssert.AreEqual(expected, actual);
     }
   }
 
