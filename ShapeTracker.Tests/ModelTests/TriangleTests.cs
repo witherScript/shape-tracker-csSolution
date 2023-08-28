@@ -87,6 +87,13 @@ namespace ShapeTracker.Tests
       string triType = isoscelesTriangle.CheckType();
       Assert.AreEqual("isosceles", triType);
     }
+    [TestMethod]
+    public void CheckType_ReturnsEquilateral_String()
+    {
+      Triangle equilateralTriangle = new Triangle(11,11,11);
+      string triType = equilateralTriangle.CheckType();
+      Assert.AreEqual("equilateral", triType);
+    }
   }
 
 }

@@ -40,9 +40,13 @@ namespace ShapeTracker.Models
       {
         return "scalene";
       }
-      else if (_side1==Side2 || _side1 == _side3 || Side2 == _side3)
+      else if ((_side1==Side2 && Side2 != _side3) || (_side1 == _side3 && Side2 != _side3) || (Side2 == _side3 && _side3 != _side1))
       {
         return "isosceles";
+      }
+      else if (_side1 == Side2 && Side2 == _side3)
+      {
+        return "equilateral";
       }
       return "";
     }
