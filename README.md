@@ -14,7 +14,7 @@ a template for creating objects of a specific type. In this way, a class groups 
 
 a grouping of related classes based on their importance or function.
 
-
+ascii banner generator: https://manytools.org/hacker-tools/ascii-banner/
 
 function hideElement(elementID){
   document.getElement(elementID).setAttribute(class, hidden);
@@ -23,8 +23,6 @@ function hideElement(elementID){
 -> hideElement(div1);
 
 //car 
-
-
  const name = "Volkswagon";
  const model = "jetta";
  const year = 2014;
@@ -55,6 +53,8 @@ class Volkswagon{
     this.currentPosition++;
   }
 }
+
+
 
 const myCar = new Volkswagon("Scion", "xD", 2014);
 
@@ -89,7 +89,6 @@ List<Triangle>
 
 
 {
-
   data: "dogs",
   next: *node 
 }
